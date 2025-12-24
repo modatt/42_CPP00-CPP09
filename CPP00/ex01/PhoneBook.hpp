@@ -6,7 +6,7 @@
 /*   By: modat <modat@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 21:38:27 by modat             #+#    #+#             */
-/*   Updated: 2025/12/21 21:42:11 by modat            ###   ########.fr       */
+/*   Updated: 2025/12/25 02:32:48 by modat            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <string>
 #include <algorithm>
 #include "Contact.hpp"
+#include <iomanip>
 
 
 class PhoneBook
@@ -25,15 +26,11 @@ class PhoneBook
         Contact contacts[8]; // function in add check if index is 8
         int contactCount;
         int index;
+        std::string    columnFormat(const std::string &text) const;
     public:
-        // PhoneBook();
-        void addContact();
-    //      void    setFirstName(first);
-    // void    setLastName(last);
-    // void    setNickname(nick);
-    // void    setPhoneNumber(number);
-    // void    setDarkestSecret(secret);
-        // void searchContact() const;
+        PhoneBook();
+        void    addContact(void);
+        void    searchContact(void);
 };
 
 #endif

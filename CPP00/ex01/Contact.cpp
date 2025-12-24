@@ -13,33 +13,61 @@
 #include "Contact.hpp"
 
 // func - 1
-void    setFirstName(std::string first)
+void    Contact::setFirstName(std::string first)
 {
-
+    firstName = first;
 }
 
 // func - 2
-void    setLastName(std::string last)
+void    Contact::setLastName(std::string last)
 {
-    
+    lastName = last;
 }
 
 // func - 3
-void    setNickName(std::string nick)
+void    Contact::setNickName(std::string nick)
 {
-    
+    nickName = nick;
 }
 
 // func - 4
-void    setPhoneNumber(std::string number)
+void    Contact::setPhoneNumber(std::string number)
 {
-    
+    phoneNumber = number;
 }
 
 // func - 5
-void    setDarkestSecret(std::string secret)
+void    Contact::setDarkestSecret(std::string secret)
 {
-    
+    darkestSecret = secret;
 }
 
+// func - 6
+std::string    Contact::getFirstName() const
+{
+    return firstName;
+}
 
+// func - 7
+std::string     Contact::getLastName() const
+{
+    return lastName;
+}
+
+// func - 8
+std::string     Contact::getNickName() const
+{
+    return nickName;
+}
+
+// func - 9
+std::string     Contact::getPhoneNumber() const
+{
+    return phoneNumber;
+}
+
+// func - 10
+std::string     Contact::getDarkestSecret() const
+{
+    return darkestSecret;
+}

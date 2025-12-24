@@ -1,7 +1,7 @@
 CC = g++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp Contact.cpp 
+SRCS = main.cpp Contact.cpp PhoneBook.cpp
 OBJCS = $(SRCS:.cpp=.o)
 
 NAME = phonebook

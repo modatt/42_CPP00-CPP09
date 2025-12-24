@@ -29,16 +29,20 @@ class Contact
         std::string darkestSecret;
 
     public:
-   
-    //     Contact();
     //     //setters
-    //     void    setContact();
+        void    setFirstName(std::string first);
+        void    setLastName(std::string last);
+        void    setNickName(std::string nick);
+        void    setPhoneNumber(std::string number);
+        void    setDarkestSecret(std::string secret);
+
+    //     Contact();
     //     // getters
-    // std::string getFirstName() const;
-    // std::string getLastName() const;
-    // std::string getNickname() const;
-    // std::string getPhoneNumber() const;
-    // std::string getDarkSecret() const;
+        std::string getFirstName() const;
+        std::string getLastName() const;
+        std::string getNickName() const;
+        std::string getPhoneNumber() const;
+        std::string getDarkestSecret() const;
         // helper functions
 
 

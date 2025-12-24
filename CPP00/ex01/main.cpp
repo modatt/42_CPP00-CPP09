@@ -23,14 +23,9 @@ int     main(void)
         std::cout << "\nEnter (ADD, SEARCH, EXIT):\n- ADD: to add contact.\n- SEARCH: to search for a contact.\n- EXIT: to exit the phonebook.\n";
         std::getline(std::cin, option);
         if (option == "ADD" || option == "Add" || option == "add")
-        {
-            // cont.set_contact();
             pb.addContact();
-        }
         else if (option == "SEARCH" || option == "Search" || option == "search")
-        {
-            std::cout << "I will search for a contact\n";
-        }
+            pb.searchContact();
         else if (option == "EXIT" || option == "Exit" || option == "exit")
             break;
         else
