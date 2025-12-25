@@ -1,7 +1,6 @@
 CC = g++
-# clang++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS = megaphone.cpp
+SRCS = MegaPhone.cpp
 OBJCS = $(SRCS:.cpp=.o)
 
 NAME = megaphone
