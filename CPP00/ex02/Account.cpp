@@ -1,32 +1,65 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Account.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: modat <modat@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/26 14:06:41 by modat             #+#    #+#             */
+/*   Updated: 2025/12/26 15:15:32 by modat            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Account.hpp"
 
 // func - 0 // static variables
+// Initialize static members
+// statics are handle the same regardless private/public
 int     Account::_nbAccounts = 0;
 int	    Account::_totalAmount = 0;
 int	    Account::_totalNbDeposits = 0;
-int	    Account::_totalNbWithdrawals = 0;
+int     Account::_totalNbWithdrawals = 0;
 
-// static function 
+// static functions
+// st_func - 1
 int 	Account::getNbAccounts( void )
 {
     return _nbAccounts;
 }
 
+// st_func - 2
 int	    Account::getTotalAmount( void )
 {
     return _totalAmount;
 }
 
+// st_func - 3
 int	    Account::getNbDeposits( void )
 {
     return _totalNbDeposits;
 }
 
+// st_func - 4
 int	    Account::getNbWithdrawals( void )
 {
     return _totalNbWithdrawals;
 }
 
+// st_func - 5
+void    Account::_displayTimestamp(void)
+{
+    // 1. get raw time.
+    std::time_t currentTime = std::time(NULL); // get raw time
+    // 2. convert to human time
+    std::tm* tm = std::localtime(&currentTime); // tm* tm structure holds time (yy/mm/dd/hh,mm,ss)
+    // 3. turn those numbers to string "formating into str".
+    char buffer[20];
+    std::strftime(buffer, sizeof(buffer), "[%Y%m%d_%H%M%S] ", tm);
+    // 4. print it.
+    std::cout << buffer;
+}
+
+// st_func - 6
 void	Account::displayAccountsInfos( void )
 {
     _displayTimestamp();
@@ -36,6 +69,8 @@ void	Account::displayAccountsInfos( void )
                 << "withdrawals:" << getNbWithdrawals() << std::endl;
 }
 
+
+// Constructor
 Account::Account(int    initial_deposit)
 {
     _accountIndex = _nbAccounts;
@@ -49,20 +84,13 @@ Account::Account(int    initial_deposit)
     std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";created" << std::endl;
 }
 
+// Destructor
 Account::~Account(void)
 {
     _displayTimestamp();
     std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";closed\n";
 }
 
-void    Account::_displayTimestamp(void)
-{
-    std::time_t currentTime = std::time(NULL);
-    std::tm* tm = std::localtime(&currentTime);
-    char buffer[20];
-    std::strftime(buffer, sizeof(buffer), "[%Y%m%d_%H%M%S] ", tm);
-    std::cout << buffer;
-}
 
 // func - 1
 void    Account::makeDeposit(int deposit)
@@ -91,7 +119,7 @@ bool    Account::makeWithdrawal(int withdrawal)
                 << "p_amount:"  << p_amount << ";";
     if (_amount < withdrawal)
     {
-        std::cout << "withdrawals:refused" << std::endl;
+        std::cout << "withdrawal:refused" << std::endl;
         return false;
     }
 
