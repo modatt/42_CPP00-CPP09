@@ -11,8 +11,14 @@
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
+#include <iostream>
+
+// Constructor 
+
+// ClassName::ClassName(signature): classAttribuate(constructor var), ClassAttribute(constactor var) {};
+HumanA::HumanA(std::string _name, Weapon& _weapon): name(_name), weapon(_weapon) {};
 
 void    HumanA::attack(void)
 {
-    std::cout << name << " attacks with their " << weapon;
+    std::cout << name << " attacks with their " << weapon.getType() << std::endl;
 }

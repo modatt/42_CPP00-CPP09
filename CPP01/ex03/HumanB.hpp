@@ -16,11 +16,18 @@
 #include <string>
 #include "Weapon.hpp"
 
-class   HumanB: public Weapon
+// composion // class has class
+// human has a weapon? yes composision
+// is human a weapon? yes  inheritance 
+class   HumanB
 {
-    public:
+    private:
         std::string name;
-        std::string weapon;
+        Weapon *weaponType;
+    public:
+        HumanB(std::string _name);
+        HumanB(std::string _name, Weapon& _weaponType);
+        void    setWeapon(Weapon& _weaponType);
         void    attack();
 };
 

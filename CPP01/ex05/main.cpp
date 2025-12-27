@@ -5,26 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: modat <modat@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/26 20:06:18 by modat             #+#    #+#             */
-/*   Updated: 2025/12/26 20:06:18 by modat            ###   ########.fr       */
+/*   Created: 2025/12/27 22:53:13 by modat             #+#    #+#             */
+/*   Updated: 2025/12/27 22:53:13 by modat            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Harl.hpp"
 
 int     main(void)
 {
-    int N = 5;
+    Harl harl;
 
-    // create the horde
-    Zombie* myHorde = zombieHorde(N, "Soldier");
+    std::cout << "[ DEBUG ]" << std::endl;
+    harl.complain("DEBUG");
+    std::cout << "[ WARNING ]" << std::endl;
+    harl.complain("WARNING");
+    std::cout << "[ UNKNOWN ]" << std::endl;
+    harl.complain("INVALID_LEVEL");
 
-    // Test: make them all announce
-    for (int i = 0; i < N; i++)
-    {
-        std::cout << i << ": ";
-        myHorde[i].announce();
-    }
-    // important: use delete[] to avoid memory leaks
-    delete[] myHorde;
+    return 0;
 }

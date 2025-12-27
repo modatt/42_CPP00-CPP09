@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: modat <modat@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/26 20:06:18 by modat             #+#    #+#             */
-/*   Updated: 2025/12/26 20:06:18 by modat            ###   ########.fr       */
+/*   Created: 2025/12/26 19:34:20 by modat             #+#    #+#             */
+/*   Updated: 2025/12/26 19:34:20 by modat            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int     main(void)
+Zombie::Zombie() {
+
+}
+
+Zombie::~Zombie()
 {
-    int N = 5;
+    std::cout << this->name << " has been destroyed." << std::endl;
+}
 
-    // create the horde
-    Zombie* myHorde = zombieHorde(N, "Soldier");
+void    Zombie::setName(std::string _name)
+{
+    this->name = _name;
+}
 
-    // Test: make them all announce
-    for (int i = 0; i < N; i++)
-    {
-        std::cout << i << ": ";
-        myHorde[i].announce();
-    }
-    // important: use delete[] to avoid memory leaks
-    delete[] myHorde;
+void    Zombie::announce( void )
+{
+    std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }

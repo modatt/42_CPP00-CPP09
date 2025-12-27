@@ -1,15 +1,15 @@
 CC = g++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRCS = main.cpp Harl.cpp
 OBJCS = $(SRCS:.cpp=.o)
 
-%.o: %.cpp
+NAME = harl
+
+%.o:%.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
-NAME = weapen
 all: $(NAME)
-
 $(NAME): $(OBJCS)
 	$(CC) $(CFLAGS) $^ -o $@
 clean:

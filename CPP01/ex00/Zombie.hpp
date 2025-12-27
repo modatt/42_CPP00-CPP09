@@ -14,22 +14,21 @@
 #define ZOMBIE_HPP
 
 #include <iostream>
+#include <string>
 
 class   Zombie
 {
     private:
         std::string name;
     public:
+        Zombie(std::string name);
+        ~Zombie(); 
+        // member function
         void announce( void );
 };
 
-
-class   NewZombie: public Zombie
-{
-    public:
-        Zombie* newZombie( std::string name );
-
-} 
-
-class   
+// standalone functions 
+Zombie* newZombie(std::string name);
+void    randomChump(std::string name);
+ 
 #endif

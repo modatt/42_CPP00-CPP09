@@ -29,12 +29,15 @@ The compiler looks at the return type: const std::string&.
 Instead of making a copy, it simply passes back the memory address (the reference) of that specific type variable, while adding a "read-only" (const) restriction to it.
 
 */
+
+Weapon::Weapon(std::string weaponType): type(weaponType) {};
+
 const std::string&     Weapon::getType() const
 {
     return this->type;
 }
 
-void     Weapon::setType(std::string para)
+void     Weapon::setType(std::string newType)
 {
-    this->type = para;
+    this->type = newType;
 }

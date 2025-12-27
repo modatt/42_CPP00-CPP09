@@ -1,10 +1,10 @@
 CC = g++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp Zombie.cpp newZombie.cpp newZombie.cpp randomChump.cpp
+SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 OBJCS = $(SRCS:.cpp=.o)
 
-NAME = brain
+NAME = memory
 
 %.o:%.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -12,7 +12,7 @@ NAME = brain
 all: $(NAME)
 
 $(NAME): $(OBJCS)
-	$(CC) $(CFLAGS) $^ $@ 
+	$(CC) $(CFLAGS) $^ -o $@ 
 clean:
 	rm -f $(OBJCS)
 fclean: clean

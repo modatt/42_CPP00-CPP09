@@ -14,6 +14,14 @@
 
 int     main(void)
 {
+    // create a zombie on a stack 
+    std::cout << "Creating a Stack zombie..." << std::endl;
+    randomChump("Stacky"); // desstroyed after randomChump finishes.
 
+    std::cout << "\nCreating a heap zombie..." << std::endl;
+    // create a zombie on the heap
+    Zombie* heapZombie = newZombie("Heapy");
+    heapZombie->announce();
+    delete heapZombie;
     return 0;
 }
