@@ -17,3 +17,9 @@ void randomChump( std::string name )
     Zombie stackZombie(name);
     stackZombie.announce();
 }
+
+/*
+// Zombie "Foo" is created
+// Foo announces
+// Foo is destroyed at the end of the function
+*/
