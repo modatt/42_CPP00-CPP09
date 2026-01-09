@@ -6,12 +6,12 @@ Before writing a program, I must ask these questions:
 1. What is the program doing?
 2. What are the components/elements of the program? what are the things in the program?
 
-For the program after having answer for those questions, I go to the second question for each object listed I return the circle and ask the two questions again. 
+For the program after having answer for those questions, I go to the second question for each object listed I return the circle and ask the two questions again.
 
-At the end you will have classes and its attributes & methods/functions + variables/parameters. 
+At the end you will have classes and its attributes & methods/functions + variables/parameters.
 
-# Composion vs Inheritance 
-- Composion: .
+# Composion vs Inheritance
+- Composion:
     ask: is XXX has XXX ? "is Human has a Weapon? yes. Is Car has Vehicle ? no. if yes, Use Composion."
 - Inheritance: .
     ask: is XXX a XXX? "is Car a Vehicle? yes, use inheritance. 
@@ -60,3 +60,65 @@ The object is optional (it could be NULL).
 You need to change what you are pointing to halfway through the code.
 You are dealing with dynamic memory (using new and delete).
 Example: Your HumanB class, because he can start unarmed and pick up a weapon later.
+
+
+/*
+    //stack:
+- The object is temporary
+
+- You only need it inside a function
+
+- Lifetime is short and well-defined
+
+- No need to return or store it elsewhere
+
+✔ Advantages
+
+No new
+
+No delete
+
+No memory leaks
+
+Faster
+
+Safer
+
+❌ Limitations
+
+Object cannot survive beyond the scope
+
+Cannot be returned as a usable object pointer
+
+// heap:
+
+- Memory is allocated manually using new
+
+- Object lives until you delete it
+
+- Destructor is called only when delete is used
+
+✅ Best when:
+
+The object must outlive the function
+
+Lifetime is dynamic or unknown
+
+Object is shared or stored elsewhere
+
+You need explicit control over destruction
+
+✔ Advantages
+
+Object survives function scope
+
+Flexible lifetime
+
+❌ Risks
+
+Must call delete
+
+Memory leaks if forgotten
+
+Slightly slower
+*/
