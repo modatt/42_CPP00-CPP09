@@ -122,3 +122,70 @@ This makes your program skip input prompts unexpectedly.
 
     // Display full contac info filed by filed divided by \n.
 }
+
+Class Initialization in C++ (Summary)
+Ways to initialize a class object:
+
+Member initializer list (preferred)
+
+PhoneBook::PhoneBook() : contactCount(0), index(0) {}
+
+
+Real initialization
+
+Required for const and reference members
+
+More efficient
+
+Assignment in constructor body
+
+PhoneBook::PhoneBook() {
+    contactCount = 0;
+    index = 0;
+}
+
+
+Not real initialization (assignment after creation)
+
+Less efficient
+
+Cannot be used for const or references
+
+Default member initialization (C++11+)
+
+class PhoneBook {
+    int contactCount = 0;
+    int index = 0;
+};
+
+
+Constructor can be empty
+
+Clean and modern
+
+Parameterized constructor
+
+PhoneBook::PhoneBook(int c, int i) : contactCount(c), index(i) {}
+
+
+Copy constructor
+
+PhoneBook::PhoneBook(const PhoneBook& other)
+    : contactCount(other.contactCount), index(other.index) {}
+
+Constructor vs Initialization
+
+Constructor: a function called when an object is created
+
+Initialization: giving members their first value
+
+Concept	Meaning
+Initializer list	True initialization (before object exists)
+Constructor body	Assignment (after object exists)
+Key Rules
+
+Initializer list runs before constructor body
+
+Always prefer initializer lists
+
+Mandatory for const and reference members
