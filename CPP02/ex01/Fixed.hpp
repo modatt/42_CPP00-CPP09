@@ -6,7 +6,7 @@
 /*   By: modat <modat@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 16:37:14 by modat             #+#    #+#             */
-/*   Updated: 2026/01/10 17:18:46 by modat            ###   ########.fr       */
+/*   Updated: 2026/01/11 11:47:03 by modat            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ class Fixed
 		const static int fracBits;
 	public:
 		Fixed();
-		Fixed(Fixed &fixedCopy); // & because without it it will create a newo bject, & use same object
-		Fixed &operator=(Fixed &fixedCopy); // this reference to the func, & point to 
+		Fixed(const Fixed &fixedCopy); // & because without it it will create a newo bject, & use same object
+		Fixed &operator=(const Fixed &fixedCopy); // this reference to the func, & point to 
 		~Fixed();
 		// ~Fixed(Fixed &fixedCopy); // check it
 		Fixed(const int &nbr);

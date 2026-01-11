@@ -4,16 +4,18 @@
 const int Fixed::fracBits = 8;
 
 // contructor 
-Fixed::Fixed(): fixedPoint(0) {};
+Fixed::Fixed(): fixedPoint(0) {std::cout << "Default constructor called\n";}
+
 
 //  Copy Constructor
-Fixed::Fixed(Fixed &fixedCopy)
+Fixed::Fixed(const Fixed &fixedCopy)
 {
-	this->fixedPoint = fixedCopy.fixedPoint;
+	std::cout << "Copy constructor called" << std::endl;
+	*this = fixedCopy;
 }
 
 // destructor
-Fixed::~Fixed() {}
+Fixed::~Fixed() { std::cout << "Destructor called\n"; }
 
 // additional contructor 
 Fixed::Fixed(const int &nbr)
@@ -21,11 +23,13 @@ Fixed::Fixed(const int &nbr)
 	// convert
 	// this->fixedPoint = nbr * 256;
 	this->fixedPoint = roundf(nbr * (1 << fracBits));
+	std::cout << "Int constructor called" << std::endl;
 }
 
 Fixed::Fixed(const float &fnbr)
 {
 	this->fixedPoint = roundf(fnbr * (1 << fracBits));
+	std::cout << "Float constructor called\n";
 }
 
 // getter
@@ -41,8 +45,9 @@ void 	Fixed::setRawBits( int const raw )
 }
 
 // operator 
-Fixed& Fixed::operator=(Fixed &fixedCopy)
+Fixed& Fixed::operator=( const Fixed &fixedCopy)
 {
+	std::cout << "Copy assignment operator called\n";
 	if (this != &fixedCopy)
 		this->fixedPoint = fixedCopy.fixedPoint;
 	return *this; 
