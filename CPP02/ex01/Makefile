@@ -4,7 +4,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 SRCS = main.cpp Fixed.cpp 
 OBJS = $(SRCS:.cpp=.o)
 
-NAME = fixed
+NAME = exe
 
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $^ -o $@
