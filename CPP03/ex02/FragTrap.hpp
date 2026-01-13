@@ -1,27 +1,21 @@
 #ifndef FRAGTRAP_HPP
 #define FRAGTRAP_HPP
 
-// #include "ScarvTrap.hpp"
-// #include "ClapTrap.hpp"
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 #include <iostream>
 #include <string>
 
-class FragTrap
+class FragTrap : public ClapTrap
 {
-    private:
-    std::string     name;
-    int             hit;
-    int             energy;
-    int             damage;
-
     public:
     // defualt 
     FragTrap();
     // para
-    FragTrap(const std:string _name);
-    // copy
+    FragTrap(const std::string _name);
+    //copy
     FragTrap(const FragTrap &copy);
-    // assigned operator
+    // // assigned operator
     FragTrap&operator=(const FragTrap &other);
     // destructor
     ~FragTrap();
