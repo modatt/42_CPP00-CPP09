@@ -5,25 +5,21 @@
 #include <iostream>
 #include <string>
 
-class ScarvTrap
+class ScavTrap : public ClapTrap
 {
-    private:
-    std::string     name;
-    int             hit;
-    int             energy;
-    int             damage;
-
     public:
     // defualt 
-    ScarvTrap();
+    ScavTrap();
     // parametarized 
-    ScarvTrap(std::string _name);
+    ScavTrap(const std::string _name);
     // copy 
-    ScarvTrap(const ScarvTrap &copy);
-    // assign 
-    ScarvTrap &operator=(const ScarvTrap &other);
+    ScavTrap(const ScavTrap &copy);
+    // // assign 
+    ScavTrap &operator=(const ScavTrap &other);
     // destructor 
-    ~ScarvTrap();
+    ~ScavTrap();
+    // // attack overwrite
+    void    attack(const std::string &target);
 
     void guardGate();
 };

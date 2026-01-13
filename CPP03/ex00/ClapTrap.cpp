@@ -52,7 +52,7 @@ void ClapTrap::attack(const std::string& target)
     }
     if (energy <= 0)
     {
-        std::cout << name << " does not have energy\n";
+        std::cout << "CalpTrap " << name << " does not have energy\n";
         return ;
     }
     energy--; // attack costs 1 energy point
