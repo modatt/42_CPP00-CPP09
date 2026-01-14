@@ -16,7 +16,7 @@ FragTrap::FragTrap(const std::string _name) : ClapTrap(_name)
     hit = 100;
     energy = 100; 
     damage = 30;
-    std::cout << "Constructor Called\n";
+    std::cout << "FragTrap " << name << " Constructor Called\n";
 }
 
 // copy

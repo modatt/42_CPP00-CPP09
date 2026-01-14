@@ -71,7 +71,7 @@ void ScavTrap::attack(const std::string& target)
         return ;
     }
     energy--; // attack costs 1 energy point
-    std::cout << "ScavTRap " << name << " attacks " << target << ", causing " << damage << " points of damage!" << std::endl;
+    std::cout << "ScavTrap " << name << " attacks " << target << ", causing " << damage << " points of damage!" << std::endl;
 }
 
 // functions
