@@ -8,6 +8,7 @@
 class ScavTrap : virtual public ClapTrap
 {
     public:
+    static const    int ENERGY = 50;
     // defualt 
     ScavTrap();
     // parametarized 

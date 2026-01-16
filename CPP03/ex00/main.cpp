@@ -4,6 +4,9 @@ int     main(void)
 {
     
     ClapTrap a("A");
+    std::cout << a.getHit() << std::endl;
+    std::cout << a.getEnergy() << std::endl;
+    std::cout << a.getAttack() << std::endl;
     // normal behav/attack
     a.attack("Enemy");
     

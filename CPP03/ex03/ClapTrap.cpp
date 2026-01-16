@@ -90,3 +90,21 @@ void ClapTrap::beRepaired(unsigned int amount)
     hit += amount;
     std::cout << "ClapTrap " << name << " repairs itself costing 1 energy point, restoring " << amount << " hit points, total hit points now " << hit << "!\n";
 }
+
+// int ClapTrap::getAttack()
+// {
+// 	return 0;
+// }
+
+int ClapTrap::getHit()
+{
+    return hit;
+}
+int ClapTrap::getEnergy()
+{
+    return energy;
+}
+int ClapTrap::getAttack()
+{
+    return damage;
+}

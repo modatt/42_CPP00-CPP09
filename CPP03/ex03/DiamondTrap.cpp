@@ -12,7 +12,7 @@ DiamondTrap::DiamondTrap() : ClapTrap("default_clap_name"), ScavTrap(), FragTrap
 DiamondTrap::DiamondTrap(std::string _name) : ClapTrap(_name + "_clap_name"), ScavTrap(_name), FragTrap(_name), name(_name)
 {
     hit = FragTrap::hit; //its 100
-    energy = ScavTrap::energy; // 50
+    energy = ScavTrap::ENERGY; // 50
     damage = FragTrap::damage; // 30
     std::cout << "DiamondTrap " << this->name << " constructed\n";
 

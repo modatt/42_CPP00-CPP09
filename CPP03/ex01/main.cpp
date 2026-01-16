@@ -3,6 +3,9 @@
 int     main(void)
 {
     ScavTrap a("SA");
+    std::cout << a.getHit() << std::endl;
+    std::cout << a.getEnergy() << std::endl;
+    std::cout << a.getAttack() << std::endl;
     
     // Test attack (overridden method)
     a.attack("Enemy");

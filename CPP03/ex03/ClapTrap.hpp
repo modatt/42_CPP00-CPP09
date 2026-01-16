@@ -26,7 +26,9 @@ class ClapTrap
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
 
-
+    int getHit();
+    int getEnergy();
+    int getAttack();
 };
 
 #endif
