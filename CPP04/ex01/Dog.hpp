@@ -1,0 +1,26 @@
+#ifndef DOG_HPP
+#define DOG_HPP
+
+#include <string>
+#include <iostream>
+#include "Animal.hpp"
+#include "Brain.hpp"
+
+
+class   Dog : public Animal
+{
+    // protected:
+    // std::string type;
+
+    private:
+    Brain* brain;
+    
+    public:
+    Dog();
+    Dog(const Dog &other);
+    Dog &operator=(const Dog &other);
+    ~Dog();
+    void    makeSound() const;
+};
+
+#endif
