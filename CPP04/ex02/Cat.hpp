@@ -6,9 +6,6 @@
 #include "Animal.hpp"
 #include "Brain.hpp"
 
-// forward declaration.
-// class Brain;
-
 class Cat : public Animal
 {
     private:

@@ -6,13 +6,9 @@
 #include "Animal.hpp"
 #include "Brain.hpp"
 
-// class Brain;
 
 class   Dog : public Animal
 {
-    // protected:
-    // std::string type;
-
     private:
     Brain   *brain;
     

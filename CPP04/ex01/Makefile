@@ -1,7 +1,7 @@
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -g -std=c++98
 
-SRCS = main.cpp 
+SRCS = main.cpp Cat.cpp Dog.cpp Animal.cpp Brain.cpp 
 OBJCS = $(SRCS:.cpp=.o)
 
 %.o: %.cpp
