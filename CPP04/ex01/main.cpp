@@ -46,6 +46,7 @@ int main() {
     std::cout << "\n--- Deep Copy Test ---" << std::endl;
     // Dog *dog1 = dynamic_cast<Dog*>(animals[0]);
     Dog dog1;
+    // a->makeSound();
     dog1.getBrain()->setIdea(0, "before change");
     Dog D = dog1;
     D.getBrain()->setIdea(0, "I LLLLLLLLLL");

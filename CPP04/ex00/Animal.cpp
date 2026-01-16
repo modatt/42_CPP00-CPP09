@@ -8,21 +8,21 @@ Animal::Animal() : type("Animal")
 
 // para
 // copy 
-                Animal::Animal(const Animal &copy) : type(copy.type)
-                {
-                    std::cout << "Animal Copy Constructor Called\n";
-                }
+Animal::Animal(const Animal &copy) : type(copy.type)
+{
+    std::cout << "Animal Copy Constructor Called\n";
+}
 
-                // operator
-                Animal &Animal::operator=(const Animal &other)
-                {
-                    std::cout << "Animal Copy Assigment Operator Called\n";
-                    if (this != &other)
-                    {
-                        type = other.type;
-                    }
-                    return *this;
-                }
+// operator
+Animal &Animal::operator=(const Animal &other)
+{
+    std::cout << "Animal Copy Assigment Operator Called\n";
+    if (this != &other)
+    {
+        type = other.type;
+    }
+    return *this;
+}
 
 // destructor 
 Animal::~Animal()
