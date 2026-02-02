@@ -4,7 +4,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 SRCS = main.cpp Base.cpp
 OBJCS = $(SRCS:.cpp=.o)
 
-NAME = convert
+NAME = base
 
 all: $(NAME)
 
