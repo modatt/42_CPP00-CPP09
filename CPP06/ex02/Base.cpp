@@ -8,14 +8,13 @@ Base::~Base()
 Base * generate(void)
 {
 	int x;
-	x = rand() % 3;
+	x = (rand() % 100) + 7;
 
-	if (x == 0)
+	if (x < 33)
 		return (new A);
-	else if (x = 1)
+	else if (x  >= 33 && x < 66)
 		return (new B);
-	else 
-		return (new C);
+	return (new C);
 }
 
 void identify(Base* p)

@@ -4,6 +4,7 @@
 #include <string>
 #include <iostream>
 #include <ctime>
+#include <cstdlib>
 
 class Base
 {
@@ -13,13 +14,13 @@ class Base
 
 class 	A: public Base
 {
-	
+
 };
 
 class 	B: public Base {};
 class 	C: public Base {};
 
-// srandalone 
+// standalone 
 Base * generate(void);
 void identify(Base* p);
 void identify(Base& p);

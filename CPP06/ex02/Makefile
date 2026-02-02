@@ -8,8 +8,11 @@ NAME = base
 
 all: $(NAME)
 
+%.o: %.cpp
+	$(CC) $(CFLAGS) -c $< -o $@
+
 $(NAME): $(OBJCS)
-	$(CC) $(OBJCS) -o $@
+	$(CC) $(CFLAGS) $^ -o $@
 
 clean:
 	rm -rf $(OBJCS)
