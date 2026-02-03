@@ -1,0 +1,15 @@
+{
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.inlineSuggest.edits.renderSideBySide": "never",
+    "editor.inlineSuggest.enabled": false,
+    "editor.inlineSuggest.edits.showLongDistanceHint": false,
+    "editor.quickSuggestions": {
+        "other": "off"
+    },
+    "editor.suggest.selectionMode": "never",
+    "editor.wordBasedSuggestions": "off",
+    "editor.snippetSuggestions": "none",
+    "terminal.integrated.suggest.showStatusBar": true,
+    "terminal.integrated.suggest.suggestOnTriggerCharacters": true,
+    "emmet.showSuggestionsAsSnippets": true
+}
