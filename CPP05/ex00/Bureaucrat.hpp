@@ -19,7 +19,7 @@ class Bureaucrat
     Bureaucrat(const std::string& name, int grade);
     ~ Bureaucrat();
 
-    int getGrade() const;
+    int     getGrade() const;
     void    setGrade(int grade);
     void    incrementGrade();
     void    decrementGrade();
@@ -35,6 +35,7 @@ class Bureaucrat
         public:
             const char* what() const throw();
     };
+
 };
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat);

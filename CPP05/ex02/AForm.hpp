@@ -2,10 +2,10 @@
 #define FORM_HPP
 
 #include <iostream>
-#include "Bureaucrat.hpp"
 
-class Bureaucrat; 
-class Form 
+class Bureaucrat;
+ 
+class AForm 
 {
     private:
         const std::string name;
@@ -13,18 +13,19 @@ class Form
         const int gradeSign;
         const int gradeExe;
     public:
-    Form();
-    Form(const std::string _name, const int _gradeSign, const int _gradeExe);
-    Form(const Form &cpy);
-    Form& operator=(const Form &other);
-    ~Form();
+    AForm();
+    AForm(const AForm &cpy);
+    AForm(const std::string _name, const int _gradeSign, const int _gradeExe);
+    AForm& operator=(const AForm &other);
+    virtual ~AForm();
     // getters and setters
     const std::string getName() const;
     int getGradeSign() const;
     int getGradeExe() const;
     bool getIsSigned() const;
-
     void beSigned(const Bureaucrat &bureaucrat);
+    void execute(const Bureaucrat& executor) const;
+    virtual void executeAction() const = 0;
     // exception classes
     class GradeTooLowException : public std::exception {
         public:
@@ -34,9 +35,12 @@ class Form
         public:
         virtual const char* what() const throw();
     };
+    class FormNotSignedException : public std::exception {
+        public:
+        virtual const char* what() const throw();
+    };
 };
 
 // stanalone function
-std::ostream& operator<<(std::ostream &out, const Form &form);
-
+std::ostream& operator<<(std::ostream &out, const AForm &form);
 #endif 

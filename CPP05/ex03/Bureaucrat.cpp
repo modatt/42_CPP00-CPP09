@@ -1,5 +1,4 @@
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
 
 // Constructors and Destructor
 Bureaucrat::Bureaucrat() : name("default"), grade(150) {}
@@ -61,7 +60,18 @@ void Bureaucrat::decrementGrade()
     grade++;
 }
 
-
+void    Bureaucrat::executeForm(const AForm& form) const
+{
+    try 
+    {
+        form.execute(*this);
+        std::cout << this->getName() << " executed " << form.getName() << std::endl;
+    }
+    catch (std::exception &e)
+    {
+        std::cout << this->getName() << " couldn't execute " << form.getName() << " because " << e.what() << std::endl;
+    }
+}
 // 
 const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
@@ -79,7 +89,7 @@ std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat)
     return os;
 }
 
-void    Bureaucrat::signForm(Form &form)
+void    Bureaucrat::signForm(AForm &form)
 {
     try 
     {
