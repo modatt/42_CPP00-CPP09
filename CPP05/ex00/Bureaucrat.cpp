@@ -37,13 +37,13 @@ const std::string Bureaucrat::getName() const
     return name;
 }
 
-void Bureaucrat::setGrade(int grade) 
+void Bureaucrat::setGrade(int theGrade) 
 {
     if (grade < 1)
         throw GradeTooHighException();
     if (grade > 150)
         throw GradeTooLowException();
-    this->grade = grade;
+    this->grade = theGrade;
 }
 
 void Bureaucrat::incrementGrade() 
