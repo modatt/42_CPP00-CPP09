@@ -15,7 +15,7 @@ class ScalarConverter
         // default
         ScalarConverter();
         //  copy 
-        ScalarConverter(const ScalarConverter&);
+        ScalarConverter(const ScalarConverter& cpy);
         // operator
         ScalarConverter&operator=(const ScalarConverter &other);
         // destructor

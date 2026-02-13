@@ -6,19 +6,16 @@
 #include <ctime>
 #include <cstdlib>
 
+class A;
+class B;
+class C;
+
 class Base
 {
 	public:
 	virtual	~Base();
 };
 
-class 	A: public Base
-{
-
-};
-
-class 	B: public Base {};
-class 	C: public Base {};
 
 // standalone 
 Base * generate(void);

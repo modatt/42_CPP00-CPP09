@@ -1,5 +1,26 @@
 #include "ScalarConverter.hpp"
 
+
+
+
+// // default
+ScalarConverter::ScalarConverter() {};
+//  copy 
+ScalarConverter::ScalarConverter(const ScalarConverter& cpy)
+{
+   (void)cpy;
+}
+// operator
+ScalarConverter&    ScalarConverter::operator=(const ScalarConverter &other)
+{
+    (void)other;
+    return *this;
+}
+// destructor
+ScalarConverter::~ScalarConverter() {};
+
+
+
 void    convertChar(const std::string &literal)
 {
     char c = literal[0];
@@ -120,16 +141,3 @@ void ScalarConverter::convert(const std::string &literal)
         std::cout << "invalid input\n";
 }
 
-
-
-// // default
-// ScalarConverter::ScalarConverter() {};
-// //  copy 
-// ScalarConverter::ScalarConverter(const ScalarConverter&) {};
-// // operator
-// ScalarConverter&    ScalarConverter::operator=(const ScalarConverter &other)
-// {
-//     return *this;
-// }
-// // destructor
-// ScalarConverter::~ScalarConverter() {};

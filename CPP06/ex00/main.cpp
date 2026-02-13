@@ -2,6 +2,26 @@
 
 
 
+
+// true main
+
+int     main(int ac, char **av)
+{
+
+    if (ac != 2)
+    {
+        std::cerr << "too many/few args\n";
+        return 1;
+    }
+    ScalarConverter::convert(av[1]);
+    return 0;
+}
+
+
+
+
+
+
 // #include "ScalarConverter.hpp"
 
 // int main(void)
@@ -121,17 +141,3 @@
 
 
 
-
-// true main
-
-int     main(int ac, char **av)
-{
-
-    if (ac != 2)
-    {
-        std::cerr << "too many/few args\n";
-        return 1;
-    }
-    ScalarConverter::convert(av[1]);
-    return 0;
-}

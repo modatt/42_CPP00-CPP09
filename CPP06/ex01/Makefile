@@ -8,7 +8,7 @@ NAME = convert
 
 all: $(NAME)
 
-$(NAME): $(OBJCS)
+$(NAME): $(OBJCS) Serializer.hpp
 	$(CC) $(OBJCS) -o $@
 
 clean:
