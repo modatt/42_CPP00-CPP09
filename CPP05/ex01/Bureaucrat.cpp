@@ -4,7 +4,7 @@
 // Constructors and Destructor
 Bureaucrat::Bureaucrat() : name("default"), grade(150) {}
 
-Bureaucrat::Bureaucrat(const Bureaucrat& cpy) : name(cpy.name), grade(cpy.grade) {};
+Bureaucrat::Bureaucrat(const Bureaucrat& cpy) : name(cpy.name), grade(cpy.grade) {}
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other) 
 {

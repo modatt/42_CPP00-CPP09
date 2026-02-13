@@ -1,8 +1,5 @@
 #include "Bureaucrat.hpp"
 
-
-#include "Bureaucrat.hpp"
-
 int main() {
     // Test 1: Valid creation
     try {

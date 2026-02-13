@@ -15,9 +15,9 @@ class Bureaucrat
         int grade;
     public:
     Bureaucrat();
-    Bureaucrat(const std::string& name, int grade);
     Bureaucrat(const Bureaucrat& cpy);
     Bureaucrat& operator=(const Bureaucrat& other);
+    Bureaucrat(const std::string& name, int grade);
     ~ Bureaucrat();
 
     int getGrade() const;
@@ -36,7 +36,6 @@ class Bureaucrat
         public:
             const char* what() const throw();
     };
-
     void    signForm(Form& form);
 };
 
