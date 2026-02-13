@@ -7,10 +7,10 @@ OBJCS = $(SRCS:.cpp=.o)
 NAME = ex00
 
 all: $(NAME)
-%.o:%.cpp 
+%.o:%.cpp whatever.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME): $(OBJCS) whatever.hpp
+$(NAME): $(OBJCS) 
 	$(CC) $(CFLAGS) $^ -o $@
 
 clean:

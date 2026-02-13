@@ -61,7 +61,7 @@ void    convertInt(const std::string &literal)
 
 void    convertFloat(const std::string &literal)
 {
-    float f = strtof(literal.c_str(), nullptr);
+    float f = strtof(literal.c_str(), NULL);
     char c = static_cast<char>(f);
     int n = static_cast<int>(f);
     double d = static_cast<double>(f);
@@ -86,7 +86,7 @@ void    convertFloat(const std::string &literal)
 
 void    convertDouble(const std::string &literal)
 {
-    double d = strtod(literal.c_str(), nullptr);
+    double d = strtod(literal.c_str(), NULL);
 
     char c = static_cast<char>(d);
     int n = static_cast<int>(d);

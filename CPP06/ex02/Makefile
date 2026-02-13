@@ -8,10 +8,10 @@ NAME = base
 
 all: $(NAME)
 
-%.o: %.cpp
+%.o: %.cpp Base.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME): $(OBJCS)
+$(NAME): $(OBJCS) 
 	$(CC) $(CFLAGS) $^ -o $@
 
 clean:

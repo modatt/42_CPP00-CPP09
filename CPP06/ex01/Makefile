@@ -1,5 +1,5 @@
-CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98 
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 
 
 SRCS = main.cpp Serializer.cpp
 OBJCS = $(SRCS:.cpp=.o)
@@ -9,7 +9,7 @@ NAME = convert
 all: $(NAME)
 
 $(NAME): $(OBJCS) Serializer.hpp
-	$(CC) $(OBJCS) -o $@
+	$(CXX) $(CXXFLAGS) $(OBJCS) -o $@
 
 clean:
 	rm -rf $(OBJCS)

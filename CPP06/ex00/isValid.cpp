@@ -70,7 +70,6 @@ bool    inValidCases(const std::string &literal)
 // func - 4
 bool    isInt(const std::string &literal)
 {
-    int n;
     int i = 0;
     if (literal[0] == '+' || literal[0] == '-')
     {

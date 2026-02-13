@@ -3,9 +3,9 @@
 
 
 #include <iostream>
-#include <cstdint>
 #include <string>
-
+#include <cstdlib>
+#include <stdint.h>
 
 struct  Data
 {
@@ -20,6 +20,7 @@ class Serializer
     Serializer();
     Serializer(const Serializer &copy);
     Serializer &operator=(const Serializer &other);
+    ~Serializer();
     
     public:
     static uintptr_t serialize(Data* ptr);
